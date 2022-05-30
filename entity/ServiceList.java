@@ -10,12 +10,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="service_list_tbl")
-public class Service {
+public class ServiceList {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

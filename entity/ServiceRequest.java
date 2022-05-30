@@ -1,16 +1,13 @@
 package com.evehiclemanagementsystem.entity;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -27,7 +24,7 @@ public class ServiceRequest {
 	private Customer customer;
 	
 	@ManyToOne
-	private Service service;
+	private ServiceList service;
 	
 	@Column(name="category")
 	private String category;
@@ -67,11 +64,11 @@ public class ServiceRequest {
 		this.customer = customer;
 	}
 
-	public Service getService() {
+	public ServiceList getService() {
 		return service;
 	}
 
-	public void setService(Service service) {
+	public void setService(ServiceList service) {
 		this.service = service;
 	}
 
